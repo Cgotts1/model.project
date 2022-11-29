@@ -1,0 +1,115 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXRoZW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+width:50vw;
+height: 50vw;
+}
+
+
+h2{
+    border:solid;
+    padding:50px;
+    background-color: black;
+    color:white;
+    border-radius: 20px;
+    opacity: .7;
+    cursor: pointer;
+}
+
+h2:active{
+    opacity: .9;
+}
+
+
+
+
+.hide{
+    font-size: 80px;
+    color:white;
+    display: none;
+    padding:20px;
+    background-color: black;
+    border-radius:20px;
+}
+
+
+
+
+
+
+
+#open-btn{
+    position:absolute;
+    top:70%;
+    left:10%;
+    width:350px;
+    height:80px;
+    font-size:2rem;
+    background:transparent;
+    color:white;
+    border:solid 2px white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+    transition: .5s;
+}
+
+#open-btn:hover{
+    background-color: white;
+    color:black;
+}
+
+#modal{
+    background-color: white;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:200px;
+    height:100px;
+    padding:10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: animatemodal;
+    animation-duration: .4s;
+}
+
+#close-btn{
+    font-size: 3rem;
+}
+
+#close-btn{
+    cursor: pointer;
+    font-size: 3rem;
+    color:#ff0000
+}
+
+#modal-container{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    background-color: rgba(0,0,0, .2);
+
+}
+
+/* modal animation */
+
+@keyframes animatemodal{
+from{
+    top: -300px;
+    opacity: 0;
+}
+to {
+    top:50%;
+    opacaity:1;
+}
+}
